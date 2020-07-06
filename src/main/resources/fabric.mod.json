@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "cr3stal",
+  "version": "${version}",
+
+  "name": "Cr³stal",
+  "description": "A Minecraft mod that turns End Crystals into Rubik's Cubes",
+  "authors": [
+    "rebane2001"
+  ],
+  "contact": {
+    "homepage": "https://github.com/rebane2001/cr3stal",
+    "sources": "https://github.com/rebane2001/cr3stal"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/cr3stal/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.rebane2001.cr3stal.Main"
+    ]
+  },
+  "mixins": [
+    "cr3stal.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
