@@ -16,11 +16,9 @@
   "license": "CC0-1.0",
   "icon": "assets/cr3stal/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "com.rebane2001.cr3stal.Main"
-    ]
+    "main": []
   },
   "mixins": [
     "cr3stal.mixins.json"
@@ -28,7 +26,6 @@
 
   "depends": {
     "fabricloader": ">=0.7.4",
-    "fabric": "*",
     "minecraft": "1.16.x"
   },
   "suggests": {
