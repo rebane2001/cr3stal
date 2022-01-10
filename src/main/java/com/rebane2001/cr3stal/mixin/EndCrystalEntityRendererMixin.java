@@ -1,7 +1,7 @@
 package com.rebane2001.cr3stal.mixin;
 
 
-import com.rebane2001.cr3stal.RubicsCubeRenderer;
+import com.rebane2001.cr3stal.RubiksCubeRenderer;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 @Mixin(EndCrystalEntityRenderer.class)
 public abstract class EndCrystalEntityRendererMixin {
     @Unique
-    private RubicsCubeRenderer cachedRubicsCubeRenderer = null;
+    private RubiksCubeRenderer cachedRubiksCubeRenderer = null;
     
     @Redirect(method = "render(Lnet/minecraft/entity/decoration/EndCrystalEntity;FFLnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;I)V",
               at = @At(value = "INVOKE", target = "net/minecraft/client/util/math/MatrixStack.translate(DDD)V", ordinal = 1))
@@ -42,14 +42,14 @@ public abstract class EndCrystalEntityRendererMixin {
     public void renderCore(ModelPart core, MatrixStack matrices, VertexConsumer vertices, int light, int overlay,
                            EndCrystalEntity endCrystalEntity, float f, float g, MatrixStack matrixStack,
                            VertexConsumerProvider vertexConsumer, int i) {
-        getRubicsCubeRenderer().render(core, matrices, vertices, light, overlay);
+        getRubiksCubeRenderer().render(core, matrices, vertices, light, overlay);
     }
     
-    private RubicsCubeRenderer getRubicsCubeRenderer() {
-        if (cachedRubicsCubeRenderer == null) {
-            cachedRubicsCubeRenderer = new RubicsCubeRenderer();
+    private RubiksCubeRenderer getRubiksCubeRenderer() {
+        if (cachedRubiksCubeRenderer == null) {
+            cachedRubiksCubeRenderer = new RubiksCubeRenderer();
         }
         
-        return cachedRubicsCubeRenderer;
+        return cachedRubiksCubeRenderer;
     }
 }

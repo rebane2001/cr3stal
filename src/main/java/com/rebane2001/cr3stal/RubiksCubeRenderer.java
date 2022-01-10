@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class RubicsCubeRenderer {
+public class RubiksCubeRenderer {
     // TODO: 2022-01-10 Make this class entirely stateless & static to avoid having to instantiate it for every end crystal 
     
     private static final int ANIMATION_LENGTH = 400;
