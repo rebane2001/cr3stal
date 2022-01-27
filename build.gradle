@@ -39,3 +39,9 @@ java {
 	archivesBaseName = project.archives_base_name
 	withSourcesJar()
 }
+
+jar {
+	from("LICENSE") {
+		rename { "${it}_${project.archivesBaseName}" }
+	}
+}
