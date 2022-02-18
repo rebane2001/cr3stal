@@ -43,27 +43,15 @@ public class RubicsCubeRenderer {
             };
 
             // rotation direction
-            if (true) {
-                Util.cubeletStatus[currentSide[0]] = cubletsTemp[6];
-                Util.cubeletStatus[currentSide[1]] = cubletsTemp[3];
-                Util.cubeletStatus[currentSide[2]] = cubletsTemp[0];
-                Util.cubeletStatus[currentSide[3]] = cubletsTemp[7];
-                Util.cubeletStatus[currentSide[4]] = cubletsTemp[4];
-                Util.cubeletStatus[currentSide[5]] = cubletsTemp[1];
-                Util.cubeletStatus[currentSide[6]] = cubletsTemp[8];
-                Util.cubeletStatus[currentSide[7]] = cubletsTemp[5];
-                Util.cubeletStatus[currentSide[8]] = cubletsTemp[2];
-            } else {
-                Util.cubeletStatus[currentSide[0]] = cubletsTemp[2];
-                Util.cubeletStatus[currentSide[1]] = cubletsTemp[5];
-                Util.cubeletStatus[currentSide[2]] = cubletsTemp[8];
-                Util.cubeletStatus[currentSide[3]] = cubletsTemp[1];
-                Util.cubeletStatus[currentSide[4]] = cubletsTemp[4];
-                Util.cubeletStatus[currentSide[5]] = cubletsTemp[7];
-                Util.cubeletStatus[currentSide[6]] = cubletsTemp[0];
-                Util.cubeletStatus[currentSide[7]] = cubletsTemp[3];
-                Util.cubeletStatus[currentSide[8]] = cubletsTemp[6];
-            }
+            Util.cubeletStatus[currentSide[0]] = cubletsTemp[6];
+            Util.cubeletStatus[currentSide[1]] = cubletsTemp[3];
+            Util.cubeletStatus[currentSide[2]] = cubletsTemp[0];
+            Util.cubeletStatus[currentSide[3]] = cubletsTemp[7];
+            Util.cubeletStatus[currentSide[4]] = cubletsTemp[4];
+            Util.cubeletStatus[currentSide[5]] = cubletsTemp[1];
+            Util.cubeletStatus[currentSide[6]] = cubletsTemp[8];
+            Util.cubeletStatus[currentSide[7]] = cubletsTemp[5];
+            Util.cubeletStatus[currentSide[8]] = cubletsTemp[2];
 
             int[] trans = Util.cubeSideTransforms[rotatingSide];
             for (int x = -1; x < 2; x++) {
