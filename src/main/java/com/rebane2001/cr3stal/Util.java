@@ -1,36 +1,37 @@
 package com.rebane2001.cr3stal;
 
-import net.minecraft.util.math.Quaternion;
+
+import org.joml.Quaternionf;
 
 public class Util {
     // Rotation of individual cubelets
-    public static Quaternion[] cubeletStatus = {
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1),
-            new Quaternion(0, 0, 0, 1)
+    public static Quaternionf[] cubeletStatus = {
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1),
+            new Quaternionf(0, 0, 0, 1)
     };
 
     // Get ID of cublet by position

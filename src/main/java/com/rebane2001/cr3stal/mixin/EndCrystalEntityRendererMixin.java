@@ -26,9 +26,9 @@ public abstract class EndCrystalEntityRendererMixin {
         this.endCrystalEntity = endCrystalEntity;
     }
 
-    @Redirect(method = "render", at = @At(value = "INVOKE", target = "net/minecraft/client/util/math/MatrixStack.translate(DDD)V", ordinal = 1))
-    public void translate(MatrixStack matrixStack, double x, double y, double z) {
-        matrixStack.translate(x, this.endCrystalEntity != null && this.endCrystalEntity.shouldShowBottom() ? 1.2D : 1D, z);
+    @Redirect(method = "render", at = @At(value = "INVOKE", target = "net/minecraft/client/util/math/MatrixStack.translate(FFF)V", ordinal = 1))
+    public void translate(MatrixStack matrixStack, float x, float y, float z) {
+        matrixStack.translate(x, this.endCrystalEntity != null && this.endCrystalEntity.shouldShowBottom() ? 1.2F : 1F, z);
     }
 
     @Redirect(method = "render", at = @At(value = "INVOKE", target = "net/minecraft/client/model/ModelPart.render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumer;II)V", ordinal = 1))

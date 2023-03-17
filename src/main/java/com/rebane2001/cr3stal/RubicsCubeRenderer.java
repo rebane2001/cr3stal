@@ -3,7 +3,7 @@ package com.rebane2001.cr3stal;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.util.math.Quaternion;
+import org.joml.Quaternionf;
 
 import java.util.Arrays;
 import java.util.concurrent.ThreadLocalRandom;
@@ -30,7 +30,7 @@ public class RubicsCubeRenderer {
         if (currentTime - ANIMATION_LENGTH > lastTime) {
             // rotate sides and corners
             int[] currentSide = Util.cubeSides[rotatingSide];
-            Quaternion[] cubletsTemp = {
+            Quaternionf[] cubletsTemp = {
                     Util.cubeletStatus[currentSide[0]],
                     Util.cubeletStatus[currentSide[1]],
                     Util.cubeletStatus[currentSide[2]],
@@ -100,7 +100,7 @@ public class RubicsCubeRenderer {
         float yy = (float) (trans[1] * Math.sin(RotationAngle / 2));
         float zz = (float) (trans[2] * Math.sin(RotationAngle / 2));
         float ww = (float) Math.cos(RotationAngle / 2);
-        Quaternion qq = new Quaternion(xx, yy, zz, ww);
+        Quaternionf qq = new Quaternionf(xx, yy, zz, ww);
         matrices.multiply(qq);
         for (int x = -1; x < 2; x++) {
             for (int y = -1; y < 2; y++) {
@@ -143,8 +143,8 @@ public class RubicsCubeRenderer {
         float yy = (float) (rY * Math.sin(RotationAngle / 2));
         float zz = (float) (rZ * Math.sin(RotationAngle / 2));
         float ww = (float) Math.cos(RotationAngle / 2);
-        Quaternion tempQuat = new Quaternion(xx, yy, zz, ww);
-        tempQuat.hamiltonProduct(Util.cubeletStatus[cubletId]);
+        Quaternionf tempQuat = new Quaternionf(xx, yy, zz, ww);
+        tempQuat.mul(Util.cubeletStatus[cubletId]);
         Util.cubeletStatus[cubletId] = tempQuat;
     }
 
